@@ -14,7 +14,11 @@ export default function CommentArea({ asin }) {
       setComments((prevComments)=>[...prevComments, newComment]);
     };
     
-
+    const refreshComments = () => {
+      setComments((prevComments) => {
+        return prevComments;
+      });
+    };
 
     useEffect(() => {
       const getComments = () => {
@@ -45,15 +49,16 @@ export default function CommentArea({ asin }) {
     
       if (asin) {
         getComments();
+        console.log(comments);
       }
-    }, [asin]);
+    }, [asin, commentCount]);
 
     
     return (
       <Col className="text-center py-3 px-3">
       {isError && <Error />}
       <h4>Reviews</h4>
-      <CommentList commentsToShow={comments} commentCount={commentCount} setCommentCount={setCommentCount}/>
+      <CommentList commentsToShow={comments} commentCount={commentCount} setCommentCount={setCommentCount} refreshComments={refreshComments}/>
       <AddComment commentCount={commentCount} setCommentCount={setCommentCount} asin={asin} updateComments={updateComments}/>
       </Col>
     )
