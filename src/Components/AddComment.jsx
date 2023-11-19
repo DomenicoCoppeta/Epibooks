@@ -55,7 +55,7 @@ export default function AddComment ({asin, commentCount, setCommentCount, update
             throw new Error('Something went wrong')
         }
     } catch (error) {
-        // alert(error)
+        alert(error)
     }}
 
     

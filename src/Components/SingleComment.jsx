@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { Bearer } from './Bearer';
+import { toast } from 'react-toastify'
 
 
 export default function SingleComment({comment, commentCount, setCommentCount}){
@@ -16,9 +17,9 @@ export default function SingleComment({comment, commentCount, setCommentCount}){
             }
           )
           if (response.ok) {
-            alert('Review successfully deleted')
+            toast.info('Review successfully deleted')
           } else {
-            throw new Error('Something went wrong')
+            toast.error('Something went wrong')
           }
         } catch (error) {
           alert(error)
@@ -29,7 +30,7 @@ export default function SingleComment({comment, commentCount, setCommentCount}){
     
 
 
-      
+
     return (
       <ListGroup.Item className='d-flex justify-content-between align-items-center'>
         <div>{comment.comment}</div>
