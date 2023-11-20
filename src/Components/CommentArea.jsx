@@ -14,12 +14,7 @@ export default function CommentArea({ asin }) {
       setComments((prevComments)=>[...prevComments, newComment]);
     };
     
-    const refreshComments = () => {
-      setComments((prevComments) => {
-        return prevComments;
-      });
-    };
-
+ 
     useEffect(() => {
       const getComments = () => {
         fetch(

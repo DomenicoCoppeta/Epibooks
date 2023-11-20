@@ -14,6 +14,8 @@ export default function AddComment ({asin, commentCount, setCommentCount, update
         elementId: null,
     });
 
+    
+
     useEffect(() => {
         setComment((c) => ({
             ...c,

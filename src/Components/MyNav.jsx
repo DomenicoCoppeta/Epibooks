@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function NavBar({searchTerm, setSearchTerm, theme, setTheme}) {
   return (
     <Navbar expand="lg" className={ 
-      `fixed-top ${theme === 'light' ? 'bg-light border-bottom' : 'bg-dark border-bottom border-light'}`}
+      `${theme === 'light' ? 'bg-light border-bottom' : 'bg-dark border-bottom border-light'}`}
       variant={theme}>
       <Container>
         <Navbar.Brand href="#">Epibooks</Navbar.Brand>
