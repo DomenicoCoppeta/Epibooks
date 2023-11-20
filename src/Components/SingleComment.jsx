@@ -4,7 +4,7 @@ import { Bearer } from './Bearer';
 import { toast } from 'react-toastify'
 
 
-export default function SingleComment({comment, refreshComments}){
+export default function SingleComment({comment}){
     const deleteComment = async (asin) => {
         try {
           let response = await fetch(

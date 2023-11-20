@@ -53,7 +53,7 @@ export default function CommentArea({ asin }) {
       <Col className="text-center py-3 px-3">
       {isError && <Error />}
       <h4>Reviews</h4>
-      <CommentList commentsToShow={comments} commentCount={commentCount} setCommentCount={setCommentCount} refreshComments={refreshComments}/>
+      <CommentList commentsToShow={comments} commentCount={commentCount} setCommentCount={setCommentCount}/>
       <AddComment commentCount={commentCount} setCommentCount={setCommentCount} asin={asin} updateComments={updateComments}/>
       </Col>
     )
